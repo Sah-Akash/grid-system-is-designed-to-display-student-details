@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Grid System</title>
+	<script src="script.js"></script>
+</head>
+<body>
+
+	<!-----------Update App Component----------->
+
+	<div>
+  <h1>Student Details</h1>
+  <app-student></app-student>
+</div>
+
+<!-----Student Template--------->
+
+	<div>
+  <input type="text" [formControl]="filterControl" placeholder="Filter by name">
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Total Marks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.total_marks }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+</body>
+</html>
